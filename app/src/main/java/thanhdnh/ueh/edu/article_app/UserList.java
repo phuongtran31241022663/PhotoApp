@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class UserList {
 
-  @SerializedName("users")
+  @SerializedName(value = "users", alternate = {"articles"})
   @Expose
   private ArrayList<User> users;
 

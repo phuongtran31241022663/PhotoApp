@@ -4,12 +4,11 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class User {
-
-  @SerializedName("id")
+  @SerializedName(value = "id", alternate = {"article_id"})
   @Expose
   private int id;
 
-  @SerializedName("uname")
+  @SerializedName(value = "uname", alternate = {"article_title"})
   @Expose
   private String uname;
 
@@ -17,11 +16,11 @@ public class User {
   @Expose
   private String password;
 
-  @SerializedName("url_profile")
+  @SerializedName(value = "url_profile", alternate = {"article_image"})
   @Expose
   private String url_profile;
 
-  @SerializedName("short_bio")
+  @SerializedName(value = "short_bio", alternate = {"article_description"})
   @Expose
   private String short_bio;
 

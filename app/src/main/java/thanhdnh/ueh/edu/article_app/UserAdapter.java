@@ -52,7 +52,7 @@ public class UserAdapter extends BaseAdapter {
 
     User user = user_list.get(position);
     if (user.getUrl_profile() != null && !user.getUrl_profile().isEmpty()) {
-      Picasso.get().load(user.getUrl_profile()).resize(300, 300).centerCrop().placeholder(R.mipmap.ic_launcher).into(dataitem.iv_photo);
+      Picasso.get().load(user.getUrl_profile()).resize(300, 300).centerCrop().into(dataitem.iv_photo);
     }
     dataitem.tv_caption.setText(user.getUname());
     return convertView;

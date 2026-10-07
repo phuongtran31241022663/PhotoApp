@@ -52,15 +52,15 @@ public class UserData {
     try {
       InputStream stream = new FileInputStream(file);
       reader = new BufferedReader(new InputStreamReader(stream));
-      StringBuffer buffer = new StringBuffer();
-      String line = "";
+      StringBuilder buffer = new StringBuilder();
+      String line;
       while ((line = reader.readLine()) != null) {
-        buffer.append(line + "\n");
+        buffer.append(line).append("\n");
       }
       return buffer.toString();
     } catch (Exception e) {
       e.printStackTrace();
     }
-    return reader != null ? reader.toString() : "";
+    return "";
   }
 }
